@@ -80,13 +80,13 @@ h1 {
   /* card components */
   .question, .answer {
     display: none; /* hide question and answer */
-    font-size: 14.5px;
+    font-size: 11px;
   }
   .value, .question, .answer, .cat {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 27.5px;
+    top: 17px;
     color: white;
     font-weight: 700;
   }
@@ -96,6 +96,7 @@ h1 {
 
   .cat {
     font-weight: 900;
+    font-size: 15px;
   }
 
   /* card status */
