@@ -26,7 +26,7 @@ body {
 }
 
 .col3 {
-  width: 33%;
+  width: 63%;
   display: inline-block;
 }
 
@@ -63,12 +63,16 @@ h1 {
   font-size: 40px;
 }
 
+h3 {
+  color: white;
+}
+
 /* cards */
 .card {
   @include border-radius(10px);
 
   background-color: $flatiron-blue;
-  height: 90px;
+  height: 105px;
   border: 2.5px solid transparent;
   position: relative;
 
@@ -120,13 +124,14 @@ h1 {
 
 /* jeopardy */
 .scoreboard-container {
-  height: 125px;
-  position: fixed;
-  bottom: 10px;
+  height: 200px;
+  position: relative;
+  color: white;
+  text-align: center;
   background: rgba(255,255,255,0.5);
   width: 100%;
   margin: 10px auto;
-  padding: 10px;
+
 }
 
 .scoreboard {

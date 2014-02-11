@@ -24,14 +24,6 @@ class Gambit < Sinatra::Application
     haml :index
   end
 
-  get "/games/new/" do
-    haml :game_form
-  end
-
-  post "/games/jeopardy/" do
-    # @game = Game.new(Deck.new("data/#{params[:deck_file]}.yml"))
-    haml :results
-  end
 
   get "/games/:type/:deck_file" do
     deck = Deck.new("data/#{params[:deck_file]}.yml")
@@ -39,11 +31,6 @@ class Gambit < Sinatra::Application
     haml :"#{params[:type]}"
   end
 
-  get "/games/students/:type/:deck_file" do
-    deck = Deck.new("data/#{params[:deck_file]}.yml")
-    @cards = deck.cards
-    haml :"#{params[:type]}2"
-  end
 
   get "/decks/:deck_file" do
     deck = Deck.new("data/#{params[:deck_file]}.yml")
@@ -51,10 +38,6 @@ class Gambit < Sinatra::Application
     haml :deck
   end
 
-  get "/:deck_file" do
-    @deck = YAML::load(File.open("data/#{params[:deck_file]}.yml"))
-    haml :test
-  end
 
   helpers do
 
